@@ -1,15 +1,18 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom"
-import components from "./structures/components"
+import { Main, Second, Navbar } from "./structures/components"
 
 function App() {
   return (
-    <div className="">
-      <components.Navbar />
+    <div>
+      <div className="text-lg font-medium">
+        svo
+      </div>
+      <Navbar />
       <Routes>
         <Route path="/">
-          <Route path="svo" element={<components.Main />} />
-          <Route path=":id" element={<components.Second />} />
+          <Route path="svo" element={<Main />} />
+          <Route path=":id" element={<Second />} />
         </Route>
       </Routes>
     </div>
