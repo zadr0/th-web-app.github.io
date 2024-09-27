@@ -1,4 +1,4 @@
-
+import { useParams } from "react-router"
 
 namespace components {
     export function Main() {
@@ -8,6 +8,12 @@ namespace components {
             </div>
         )
     }
+    export function Second() {
+        const { id } = useParams<{id: string}>();
+        return (<div>
+            Welcome to second: { id }
+        </div>)
+    };
 }
 
 export default components;
